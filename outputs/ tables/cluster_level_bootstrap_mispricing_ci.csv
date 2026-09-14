@@ -1,0 +1,8 @@
+sample,observations,clusters,cluster_variable,row_mean_mispricing,cluster_mean_mispricing,cluster_mean_ci_95_low,cluster_mean_ci_95_high,row_median_mispricing,cluster_median_mispricing,cluster_median_ci_95_low,cluster_median_ci_95_high,n_boot
+Polymarket terminal,19649,2847,market_id,0.007551,0.007496,0.006709,0.008285,0.002772,0.002764,0.002407,0.003131,2000
+Polymarket terminal short-horizon,19649,2847,market_id,0.007551,0.007496,0.006709,0.008285,0.002772,0.002764,0.002407,0.003131,2000
+Polymarket terminal very-short-horizon,19616,2847,market_id,0.007511,0.007483,0.006704,0.008271,0.00274,0.002764,0.002407,0.003131,2000
+Polymarket path-dependent,10323,584,market_id,0.084643,0.076566,0.067337,0.085983,0.030254,0.018768,0.015237,0.022116,2000
+"Kalshi timestamped, first trade within 30 minutes",3135,485,event_ticker,0.063073,0.07067,0.064565,0.077081,0.019875,0.032225,0.026905,0.037922,2000
+"Kalshi timestamped, first trade within 15 minutes",2554,483,event_ticker,0.063855,0.076731,0.070557,0.083126,0.026789,0.039138,0.033755,0.048955,2000
+Unified matched,33107,3916,inference_cluster,0.036846,0.02562,0.023693,0.027604,0.008653,0.005984,0.005437,0.006565,2000

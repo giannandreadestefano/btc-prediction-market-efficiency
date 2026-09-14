@@ -1,0 +1,2 @@
+dataset,rows,start_date,end_date,missing_spot,missing_dvol,avg_spot,avg_dvol,avg_sigma
+Deribit daily inputs,886,2024-01-01 00:00:00+00:00,2026-06-04 00:00:00+00:00,0,0,82422.67362302484,50.890564334085774,0.5089056433408577
