@@ -1,54 +1,76 @@
-# BTC Prediction Market Efficiency
+# Cross-Market Mispricing in Bitcoin Prediction Markets
 
-This repository documents my MSc thesis project on pricing efficiency in binary prediction markets, with a focus on Bitcoin-related event contracts.
+This repository contains the empirical code and selected outputs from my MSc thesis in Economics and Finance at LUISS Guido Carli.
 
-## Thesis Topic
+## Thesis
 
-**Pricing Efficiency in Binary Prediction Markets — Evidence from BTC Derivatives**
+**Cross-Market Mispricing in Bitcoin Prediction Markets: Evidence from Polymarket, Kalshi, and Deribit**
 
-The project investigates whether event probabilities observed on prediction markets such as Polymarket and Kalshi are consistent with derivatives-implied benchmarks from Bitcoin options and volatility markets.
+The thesis studies whether probabilities observed in Bitcoin-related prediction markets differ systematically from a benchmark derived from Bitcoin spot prices and Deribit's DVOL implied-volatility index.
 
-## Research Objective
+The analysis focuses on Polymarket and Kalshi and compares observed prediction-market probabilities with a DVOL-based Deribit-implied probability proxy.
 
-The main objective is to compare binary prediction-market probabilities with benchmarks derived from BTC derivatives markets, in order to identify pricing deviations, probability miscalibration and potential cross-market inefficiencies.
+## Research Question
 
-## Data Sources
+Do Bitcoin prediction-market prices on Polymarket and Kalshi differ systematically from a DVOL-based Deribit-implied probability benchmark?
 
-The empirical analysis is expected to use:
+## Data
 
-- Polymarket binary prediction market data
-- Kalshi event probability data
-- Deribit BTC derivatives data
-- BTC spot and futures market data
+The empirical analysis combines:
+
+- Polymarket Bitcoin-related prediction markets
+- Kalshi KXBTC event contracts
+- Bitcoin spot prices
+- Deribit DVOL implied-volatility data
+
+The final matched dataset contains:
+
+- **19,649** Polymarket terminal-contract observations
+- **10,323** Polymarket path-dependent observations
+- **3,135** Kalshi contracts using the first timestamped trade within 30 minutes of market opening
+- **33,107** observations in the unified dataset
+- **6,566** unique contracts
+
+The sample covers the period from March 2024 to June 2026.
 
 ## Methodology
 
 The empirical pipeline includes:
 
-- Prediction-market data collection through APIs
-- Market and maturity matching
-- Probability extraction from binary contracts
-- Derivatives-implied benchmark construction
-- Mispricing measurement
-- Probability calibration analysis
-- OLS and predictive regressions
+- API-based prediction-market data collection
+- Contract parsing and classification
+- Timestamp and maturity matching
+- Bitcoin spot and DVOL matching
+- Construction of a Black-Scholes-style probability benchmark
+- Signed and absolute pricing-difference measures
+- Descriptive analysis
+- Bootstrap inference
+- OLS regressions with robust and clustered standard errors
+- Monthly and horizon-based robustness checks
 
-## Current Status
+For terminal events such as \(S_T > K\), the benchmark probability is constructed using the Black-Scholes terminal distribution:
 
-Work in progress — MSc thesis project.
+\[
+P(S_T > K) = \Phi(d_2)
+\]
 
-The repository currently documents the research design and methodology. Code, figures and empirical outputs will be added progressively as the thesis develops.
+The benchmark should be interpreted as a risk-neutral-style probability proxy rather than a physical probability forecast.
 
-## Planned Repository Structure
+## Repository Structure
 
-```text
-src/          Python scripts for data collection, matching and regressions
-notebooks/    Exploratory analysis and empirical checks
-figures/      Output charts and diagnostics
-data_sample/  Small illustrative data samples only
-paper/        Thesis-related documents, if publicly shareable
-```
+config.py        Project configuration
 
-## Disclaimer
+notebook/
+    01_polymarket_data.ipynb
+    02_kalshi_data.ipynb
+    03_deribit_data.ipynb
+    04_dataset_construction.ipynb
+    05_descriptive_analysis.ipynb
+    06_empirical_analysis.ipynb
 
-This repository is intended for academic and research purposes only. It does not constitute investment advice.
+outputs/
+    figures/     Selected figures from the empirical analysis
+    tables/      Selected summary and regression outputs
+
+data_sample/
+    Small illustrative sample of the final matched dataset
