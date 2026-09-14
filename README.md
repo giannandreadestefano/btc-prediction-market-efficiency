@@ -58,6 +58,7 @@ The benchmark should be interpreted as a risk-neutral-style probability proxy ra
 
 ## Repository Structure
 
+```text
 config.py        Project configuration
 
 notebook/
