@@ -1,6 +1,0 @@
-sample,observations,contracts,start_date,end_date,avg_prob_market,avg_prob_deribit,avg_mispricing,median_mispricing,sd_mispricing,avg_tau_days
-Polymarket terminal,19649,2847,2024-03-09 00:00:00+00:00,2026-06-03 00:00:00+00:00,0.3132,0.3056,0.0076,0.0028,0.0398,3.6941
-Polymarket terminal short-horizon,19649,2847,2024-03-09 00:00:00+00:00,2026-06-03 00:00:00+00:00,0.3132,0.3056,0.0076,0.0028,0.0398,3.6941
-Polymarket terminal very-short-horizon,19616,2847,2024-03-09 00:00:00+00:00,2026-06-03 00:00:00+00:00,0.3129,0.3054,0.0075,0.0027,0.0398,3.678
-Polymarket path-dependent,10323,584,2024-04-03 00:00:00+00:00,2026-06-01 00:00:00+00:00,0.1698,0.0852,0.0846,0.0303,0.1431,54.9478
-"Kalshi timestamped, first trade within 30 minutes",3135,3135,2025-02-04 00:00:00+00:00,2026-06-04 00:00:00+00:00,0.1847,0.1216,0.0631,0.0199,0.1477,0.0363

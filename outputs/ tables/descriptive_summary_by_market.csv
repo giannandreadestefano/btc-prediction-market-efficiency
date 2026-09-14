@@ -1,3 +1,0 @@
-market,observations,contracts,dates,avg_prob_market,avg_prob_deribit,avg_mispricing,median_mispricing,sd_mispricing,avg_tau_days
-kalshi,3135,3135,485,0.1847,0.1216,0.0631,0.0199,0.1477,0.0363
-polymarket,29972,3431,813,0.2638,0.2297,0.0341,0.008,0.0971,21.347
