@@ -1,0 +1,4 @@
+sample,rows,events,mean_price
+Complete reconciled first trades,3802,485,0.17344292477643347
+First trade within 15 minutes,2554,483,0.19498825371965545
+First trade within 30 minutes,3135,485,0.1847145135566188
